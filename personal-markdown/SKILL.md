@@ -15,8 +15,10 @@ Apply the user's writing conventions so notes are easy to skim in both raw edit 
 
 ## Topic and supporting points
 
+- Prefer topic ordering over numbered headings or a contents list for compact notes; add navigation when the user requests it or the document benefits from it.
 - Prefer short, topic-led headings such as `Prompt and context` or `smallest approach`. Let the heading establish the subject without repeating it in a generic introductory bullet.
 - Use `* ->` for direct definitions, responsibilities, distinctions, and other main points. A complete statement can follow the arrow; do not force every point into a standalone topic label followed by an explanation.
+- Give independently useful facts their own `* ->` lines, even within one subsection. Keep short qualifications beside the claim in `(_..._)` rather than promoting every qualification to a separate point.
 - Use following unindented `-` lines for supporting reasons, qualifications, or examples when a main point needs elaboration. A topic-only arrow bullet remains useful for a group of supporting points.
 - Use ordinary bold for key terms and phrases a reader should notice while skimming. Reserve bold inline code for especially important concepts or precise phrases, including within a sentence; it is not mandatory on every topic label.
 - Keep one coherent idea together: combine closely related responsibilities or dependencies in one arrow statement using `+`, `&`, or a clear progression. Split when each phase, action, failure kind, or condition needs separate attention; compactness does not mean packing a paragraph into one bullet. Preserve conditions, sequence, and distinctions that affect meaning.
@@ -34,7 +36,7 @@ Apply the user's writing conventions so notes are easy to skim in both raw edit 
 
 ## Examples and code
 
-- Visually separate illustrative scenarios from general knowledge with a `yml` fence starting with `# Example: <scenario>`. Put the scenario on that header line when concise, and use `->` for its component statements or steps. This is the user's visual convention; the prose inside need not be executable YAML.
+- Visually separate illustrative scenarios from general knowledge with a `yml` fence starting with `# Example: <scenario>`. Put the scenario on that header line when concise, and use `->` for sequence or dependency. Compact `Actor: action` lines also work for describing each participant's behavior; use `=>` for an outcome. This is the user's visual convention; the prose inside need not be executable YAML.
 - Group related extended examples beneath a heading such as `# Example: request pipeline`, with the particular applications as subheadings. Remove adjacent miniature examples that merely repeat the scenario or diagram.
 - Split long example sentences into meaningful lines. Do not insert Markdown emphasis inside a code fence expecting it to render.
 - Use appropriate language fences for actual code. Label mixed non-executable pseudocode explicitly and use `text`; do not label it runnable Python.
@@ -96,5 +98,6 @@ These examples illustrate flexible layouts, not a mandatory heading sequence or 
 
 - When the user provides another style explanation, update this skill's relevant rule and, when useful, its example. Maintain one source of truth rather than copying the full style into project AGENTS.md files.
 - Apply clear refinements directly. If a new preference conflicts with an earlier rule and the intended distinction remains unclear, ask a focused question before changing that rule; continue independent work.
+- When learning from a user-edited draft or Git diff, respect the stated review boundary; unfinished or untouched sections are not evidence of an endorsed preference. Infer style separately from technical correctness, grammar, and code syntax.
 - Distinguish reusable preferences from project-specific exceptions. Do not generalize every one-off example into a universal rule.
 - Check edits for preserved meaning, topic/support hierarchy, example separation, valid reference targets, and balanced fences. Use the skill-creator validator when changing skill structure or metadata.
